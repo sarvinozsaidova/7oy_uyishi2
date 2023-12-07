@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<table>
+    <thead>
+        <th>model</th>
+        <th>year</th>
+        <th>price</th>
+        <th>color</th>
+        <th>image</th>
+    </thead>
+    <tbody>
+        {%for avto in avtos%}
+        <tr>
+            <td>{{avto.model}}</td>
+            <td>{{avto.year}}</td>
+            <td>{{avto.price}}</td>
+            <td>{{avto.color}}</td>
+            <td>
+                <img src="/media/{{avto.image}}">
+            </td>
+            <td>
+                <a type="button" class="btn btn-warning" href="/avtoupdate/{{avto.id}}">Update</a>
+                <a type="button" class="btn btn-warning" href="/avtodelete/{{avto.id}}">Delate</a>
+                <a type="button" class="btn btn-warning" href="/avto/{{avto.id}}">View</a>
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+{% endblock %}

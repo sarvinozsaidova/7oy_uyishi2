@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="avto">
+    {% csrf_token %}
+    {{form.as_p}}
+    <a type="button" class="btn btn-warning" href="{% url 'avtos' %}">Cancel</a>
+    <button type="submit" class="btn btn-warning">Update</button>
+</form>
+
+{% endblock %}

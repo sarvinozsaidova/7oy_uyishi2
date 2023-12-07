@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>
+    {{avto.model}}
+</h1>
+<h2>
+    {{avto.year}}
+</h2>
+<h3>
+    {{avto.price}}
+</h3>
+<h4>
+    {{avto.color}}
+</h4>
+<h5>
+    <img src="/media/{{avto.image}}">
+</h5>
+
+{% endblock %}
